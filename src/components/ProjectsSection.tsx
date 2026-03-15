@@ -79,7 +79,7 @@ const ProjectsSection = () => {
                 </p>
               </div>
               <div className="md:col-span-6">
-                <p className="font-body text-sm text-muted-foreground group-hover:text-background/80">
+                <p className="font-body text-sm text-muted-foreground group-hover:text-primary-foreground/80">
                   {project.description}
                 </p>
               </div>
