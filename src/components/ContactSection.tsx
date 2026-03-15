@@ -48,7 +48,7 @@ const ContactSection = () => {
                 className="border-t border-border py-5 flex items-center justify-between group hover-fill px-4 -mx-4"
               >
                 <div className="flex items-center gap-4">
-                  <MapPin size={16} className="text-muted-foreground group-hover:text-primary-foreground" />
+                  <MapPin size={16} className="text-muted-foreground group-hover:text-background" />
                   <span className="font-body text-sm">LinkedIn Profile</span>
                 </div>
                 <ArrowUpRight size={16} className="opacity-0 group-hover:opacity-100 transition-opacity duration-75" />

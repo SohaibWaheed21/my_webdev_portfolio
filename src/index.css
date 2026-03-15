@@ -95,11 +95,11 @@
   }
 
   .hover-fill {
-    transition: background-color 0.05s ease;
+    transition: background-color 0.05s ease, color 0.05s ease;
   }
 
   .hover-fill:hover {
-    background-color: hsl(var(--primary));
-    color: hsl(var(--primary-foreground));
+    background-color: hsl(var(--foreground));
+    color: hsl(var(--background));
   }
 }
