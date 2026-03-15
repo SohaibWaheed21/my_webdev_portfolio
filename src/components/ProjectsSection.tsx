@@ -74,7 +74,7 @@ const ProjectsSection = () => {
                 </h3>
               </div>
               <div className="md:col-span-2">
-                <p className="font-body text-xs uppercase tracking-widest text-muted-foreground group-hover:text-background/60">
+                <p className="font-body text-xs uppercase tracking-widest text-muted-foreground group-hover:text-primary-foreground/60">
                   {project.tech}
                 </p>
               </div>
