@@ -1,9 +1,10 @@
 const skills = {
-  Languages: ["Python", "JavaScript", "Java", "C", "SQL"],
-  Frontend: ["React.js", "HTML", "Tailwind CSS"],
-  Backend: ["Node.js", "FastAPI", "Flask", "Django"],
-  Databases: ["PostgreSQL", "MongoDB", "SQL"],
-  Tools: ["JavaFX", "Git", "Figma", "Excel"],
+  Languages: ["Python", "JavaScript", "TypeScript", "Java", "C", "SQL"],
+  Frontend: ["React.js", "Next.js", "HTML5", "CSS3", "Tailwind CSS", "Bootstrap", "Sass"],
+  Backend: ["Node.js", "Express.js", "FastAPI", "Flask", "Django", "REST APIs"],
+  Databases: ["PostgreSQL", "MongoDB", "MySQL", "Firebase"],
+  "Design & UI": ["Figma", "Adobe XD", "Responsive Design", "Wireframing", "Prototyping"],
+  "DevOps & Tools": ["Git", "GitHub", "Docker", "VS Code", "Postman", "Vercel", "Netlify"],
 };
 
 const SkillsSection = () => {
