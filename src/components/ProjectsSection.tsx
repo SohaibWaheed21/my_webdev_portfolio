@@ -63,7 +63,7 @@ const ProjectsSection = () => {
               className="border-t border-border py-8 grid grid-cols-1 md:grid-cols-12 gap-4 group cursor-pointer hover-fill px-4 -mx-4"
             >
               <div className="md:col-span-1">
-                <span className="font-display text-xs text-muted-foreground group-hover:text-background/60">
+                <span className="font-display text-xs text-muted-foreground group-hover:text-primary-foreground/60">
                   {project.id}
                 </span>
               </div>
