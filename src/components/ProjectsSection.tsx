@@ -63,7 +63,7 @@ const ProjectsSection = () => {
               className="border-t border-border py-8 grid grid-cols-1 md:grid-cols-12 gap-4 group cursor-pointer hover-fill px-4 -mx-4"
             >
               <div className="md:col-span-1">
-                <span className="font-display text-xs text-muted-foreground group-hover:text-background/60">
+                <span className="font-display text-xs text-muted-foreground group-hover:text-primary-foreground/60">
                   {project.id}
                 </span>
               </div>
@@ -74,12 +74,12 @@ const ProjectsSection = () => {
                 </h3>
               </div>
               <div className="md:col-span-2">
-                <p className="font-body text-xs uppercase tracking-widest text-muted-foreground group-hover:text-background/60">
+                <p className="font-body text-xs uppercase tracking-widest text-muted-foreground group-hover:text-primary-foreground/60">
                   {project.tech}
                 </p>
               </div>
               <div className="md:col-span-6">
-                <p className="font-body text-sm text-muted-foreground group-hover:text-background/80">
+                <p className="font-body text-sm text-muted-foreground group-hover:text-primary-foreground/80">
                   {project.description}
                 </p>
               </div>
