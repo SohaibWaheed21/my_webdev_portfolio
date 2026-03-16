@@ -41,7 +41,11 @@ const SkillsSection = () => {
               {Object.entries(skills).map(([category, items], catIndex) => (
                 <motion.div
                   key={category}
+<<<<<<< HEAD
                   className="group border-t border-border/80 py-6 grid grid-cols-1 md:grid-cols-4 gap-4 transition-colors duration-300 hover:border-white/20"
+=======
+                  className="border-t border-border py-6 grid grid-cols-1 md:grid-cols-4 gap-4"
+>>>>>>> e4bb60752072ec142cce04758404c217137c2289
                   initial={{ opacity: 0, y: 15 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-50px" }}
@@ -54,12 +58,20 @@ const SkillsSection = () => {
                     {items.map((skill, i) => (
                       <motion.span
                         key={skill}
+<<<<<<< HEAD
                         className="skill-pill font-body text-sm px-4 py-2 cursor-default"
+=======
+                        className="font-body text-sm border border-border px-4 py-2 hover-fill cursor-default"
+>>>>>>> e4bb60752072ec142cce04758404c217137c2289
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.3, delay: catIndex * 0.08 + i * 0.03 }}
+<<<<<<< HEAD
                         whileHover={{ y: -4, scale: 1.03 }}
+=======
+                        whileHover={{ y: -2 }}
+>>>>>>> e4bb60752072ec142cce04758404c217137c2289
                       >
                         {skill}
                       </motion.span>

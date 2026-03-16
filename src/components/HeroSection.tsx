@@ -6,6 +6,7 @@ const HeroSection = () => {
     <section id="hero" className="min-h-screen flex flex-col justify-center border-b border-border px-6 pt-20">
       <div className="max-w-[1400px] mx-auto w-full">
         <motion.div
+<<<<<<< HEAD
           className="mb-10 inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-[11px] uppercase tracking-[0.32em] text-muted-foreground shadow-[0_0_0_1px_rgba(255,255,255,0.02)] backdrop-blur-sm"
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
@@ -15,6 +16,8 @@ const HeroSection = () => {
           Available for freelance and product work
         </motion.div>
         <motion.div
+=======
+>>>>>>> e4bb60752072ec142cce04758404c217137c2289
           className="mb-6"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -25,6 +28,7 @@ const HeroSection = () => {
           </p>
         </motion.div>
 
+<<<<<<< HEAD
         <div className="flex flex-col gap-12 lg:flex-row lg:items-start lg:justify-between lg:gap-12">
           <div className="max-w-4xl">
             <h1 className="font-display text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold leading-[0.9] tracking-tight mb-8">
@@ -70,6 +74,41 @@ const HeroSection = () => {
                 className="hero-portrait-image"
               />
             </div>
+=======
+        <div className="flex items-start justify-between gap-8">
+          <h1 className="font-display text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold leading-[0.9] tracking-tight mb-8">
+            <motion.span
+              className="inline-block"
+              initial={{ opacity: 0, y: 40, filter: "blur(8px)" }}
+              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+            >
+              Sohaib
+            </motion.span>
+            <br />
+            <motion.span
+              className="inline-block text-primary"
+              initial={{ opacity: 0, y: 40, filter: "blur(8px)" }}
+              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              transition={{ duration: 0.8, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
+            >
+              Waheed
+            </motion.span>
+          </h1>
+
+          <motion.div
+            className="hidden md:block flex-shrink-0 w-44 h-44 lg:w-56 lg:h-56 rounded-2xl overflow-hidden border-2 border-border"
+            initial={{ opacity: 0, scale: 0.9, rotate: -3 }}
+            animate={{ opacity: 1, scale: 1, rotate: 0 }}
+            transition={{ duration: 0.7, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            whileHover={{ scale: 1.03, rotate: 1 }}
+          >
+            <img
+              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+              alt="Sohaib Waheed"
+              className="w-full h-full object-cover"
+            />
+>>>>>>> e4bb60752072ec142cce04758404c217137c2289
           </motion.div>
         </div>
 
@@ -91,7 +130,11 @@ const HeroSection = () => {
           >
             <button
               onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
+<<<<<<< HEAD
               className="premium-button font-display text-sm uppercase tracking-widest px-8 py-4 flex items-center gap-3"
+=======
+              className="font-display text-sm uppercase tracking-widest border border-border px-8 py-4 hover-fill flex items-center gap-3 transition-transform hover:translate-x-1"
+>>>>>>> e4bb60752072ec142cce04758404c217137c2289
             >
               View Projects
               <ArrowDown size={16} />

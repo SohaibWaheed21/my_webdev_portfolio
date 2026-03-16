@@ -4,6 +4,7 @@ import AboutSection from "@/components/AboutSection";
 import SkillsSection from "@/components/SkillsSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import ContactSection from "@/components/ContactSection";
+<<<<<<< HEAD
 import ParticleBackground from "@/components/ParticleBackground";
 
 const Index = () => {
@@ -18,6 +19,18 @@ const Index = () => {
         <ProjectsSection />
         <ContactSection />
       </div>
+=======
+
+const Index = () => {
+  return (
+    <div className="min-h-screen bg-background text-foreground">
+      <Navbar />
+      <HeroSection />
+      <AboutSection />
+      <SkillsSection />
+      <ProjectsSection />
+      <ContactSection />
+>>>>>>> e4bb60752072ec142cce04758404c217137c2289
     </div>
   );
 };

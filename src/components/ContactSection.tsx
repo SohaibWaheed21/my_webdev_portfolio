@@ -42,11 +42,16 @@ const ContactSection = () => {
                   href={item.href}
                   target={item.external ? "_blank" : undefined}
                   rel={item.external ? "noopener noreferrer" : undefined}
+<<<<<<< HEAD
                   className="project-row border-t border-border/80 py-5 flex items-center justify-between group px-4 -mx-4"
+=======
+                  className="border-t border-border py-5 flex items-center justify-between group hover-fill px-4 -mx-4"
+>>>>>>> e4bb60752072ec142cce04758404c217137c2289
                   initial={{ opacity: 0, x: -15 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: i * 0.1 }}
+<<<<<<< HEAD
                   whileHover={{ x: 6 }}
                 >
                   <div className="flex items-center gap-4">
@@ -54,6 +59,14 @@ const ContactSection = () => {
                     <span className="font-body text-sm">{item.label}</span>
                   </div>
                   <ArrowUpRight size={16} className="opacity-0 transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:opacity-100" />
+=======
+                >
+                  <div className="flex items-center gap-4">
+                    <item.icon size={16} className="text-muted-foreground group-hover:text-primary-foreground" />
+                    <span className="font-body text-sm">{item.label}</span>
+                  </div>
+                  <ArrowUpRight size={16} className="opacity-0 group-hover:opacity-100 transition-opacity duration-150" />
+>>>>>>> e4bb60752072ec142cce04758404c217137c2289
                 </motion.a>
               ))}
 
