@@ -1,4 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
+import { motion } from "framer-motion";
 
 const projects = [
   {
@@ -44,23 +45,39 @@ const ProjectsSection = () => {
     <section id="projects" className="border-b border-border px-6 py-20 md:py-32">
       <div className="max-w-[1400px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-12">
-          <div className="md:col-span-4">
+          <motion.div
+            className="md:col-span-4"
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.5 }}
+          >
             <p className="font-body text-xs uppercase tracking-[0.3em] text-muted-foreground">
               03 — Projects
             </p>
-          </div>
-          <div className="md:col-span-8">
+          </motion.div>
+          <motion.div
+            className="md:col-span-8"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+          >
             <h2 className="font-display text-3xl md:text-5xl font-bold leading-tight">
               Selected Work
             </h2>
-          </div>
+          </motion.div>
         </div>
 
         <div className="space-y-0">
-          {projects.map((project) => (
-            <div
+          {projects.map((project, i) => (
+            <motion.div
               key={project.id}
               className="border-t border-border py-8 grid grid-cols-1 md:grid-cols-12 gap-4 group cursor-pointer hover-fill px-4 -mx-4"
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.4, delay: i * 0.08 }}
             >
               <div className="md:col-span-1">
                 <span className="font-display text-xs text-muted-foreground group-hover:text-primary-foreground/60">
@@ -70,7 +87,7 @@ const ProjectsSection = () => {
               <div className="md:col-span-3">
                 <h3 className="font-display text-xl font-semibold flex items-center gap-2">
                   {project.title}
-                  <ArrowUpRight size={16} className="opacity-0 group-hover:opacity-100 transition-opacity duration-75" />
+                  <ArrowUpRight size={16} className="opacity-0 group-hover:opacity-100 transition-opacity duration-150" />
                 </h3>
               </div>
               <div className="md:col-span-2">
@@ -83,7 +100,7 @@ const ProjectsSection = () => {
                   {project.description}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
