@@ -1,75 +1,89 @@
 import { Mail, Phone, MapPin, ArrowUpRight } from "lucide-react";
+import { motion } from "framer-motion";
 
 const ContactSection = () => {
   return (
     <section id="contact" className="px-6 py-20 md:py-32">
       <div className="max-w-[1400px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
-          <div className="md:col-span-4">
+          <motion.div
+            className="md:col-span-4"
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.5 }}
+          >
             <p className="font-body text-xs uppercase tracking-[0.3em] text-muted-foreground">
               04 — Contact
             </p>
-          </div>
+          </motion.div>
 
           <div className="md:col-span-8">
-            <h2 className="font-display text-3xl md:text-5xl font-bold leading-tight mb-12">
+            <motion.h2
+              className="font-display text-3xl md:text-5xl font-bold leading-tight mb-12"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.6 }}
+            >
               Let's work
               <br />
               <span className="text-primary">together.</span>
-            </h2>
+            </motion.h2>
 
             <div className="space-y-0">
-              <a
-                href="mailto:sohaibwaheed06@gmail.com"
-                className="border-t border-border py-5 flex items-center justify-between group hover-fill px-4 -mx-4"
-              >
-                <div className="flex items-center gap-4">
-                  <Mail size={16} className="text-muted-foreground group-hover:text-primary-foreground" />
-                  <span className="font-body text-sm">sohaibwaheed06@gmail.com</span>
-                </div>
-                <ArrowUpRight size={16} className="opacity-0 group-hover:opacity-100 transition-opacity duration-75" />
-              </a>
+              {[
+                { href: "mailto:sohaibwaheed06@gmail.com", icon: Mail, label: "sohaibwaheed06@gmail.com", external: false },
+                { href: "tel:+923035445689", icon: Phone, label: "+92 303 5445689", external: false },
+                { href: "https://linkedin.com/in/sohaibwaheed-650343369", icon: MapPin, label: "LinkedIn Profile", external: true },
+              ].map((item, i) => (
+                <motion.a
+                  key={item.label}
+                  href={item.href}
+                  target={item.external ? "_blank" : undefined}
+                  rel={item.external ? "noopener noreferrer" : undefined}
+                  className="border-t border-border py-5 flex items-center justify-between group hover-fill px-4 -mx-4"
+                  initial={{ opacity: 0, x: -15 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: i * 0.1 }}
+                >
+                  <div className="flex items-center gap-4">
+                    <item.icon size={16} className="text-muted-foreground group-hover:text-primary-foreground" />
+                    <span className="font-body text-sm">{item.label}</span>
+                  </div>
+                  <ArrowUpRight size={16} className="opacity-0 group-hover:opacity-100 transition-opacity duration-150" />
+                </motion.a>
+              ))}
 
-              <a
-                href="tel:+923035445689"
-                className="border-t border-border py-5 flex items-center justify-between group hover-fill px-4 -mx-4"
+              <motion.div
+                className="border-t border-border py-5 flex items-center gap-4 px-4 -mx-4"
+                initial={{ opacity: 0, x: -15 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.3 }}
               >
-                <div className="flex items-center gap-4">
-                  <Phone size={16} className="text-muted-foreground group-hover:text-primary-foreground" />
-                  <span className="font-body text-sm">+92 303 5445689</span>
-                </div>
-                <ArrowUpRight size={16} className="opacity-0 group-hover:opacity-100 transition-opacity duration-75" />
-              </a>
-
-              <a
-                href="https://linkedin.com/in/sohaibwaheed-650343369"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="border-t border-border py-5 flex items-center justify-between group hover-fill px-4 -mx-4"
-              >
-                <div className="flex items-center gap-4">
-                  <MapPin size={16} className="text-muted-foreground group-hover:text-primary-foreground" />
-                  <span className="font-body text-sm">LinkedIn Profile</span>
-                </div>
-                <ArrowUpRight size={16} className="opacity-0 group-hover:opacity-100 transition-opacity duration-75" />
-              </a>
-
-              <div className="border-t border-border py-5 flex items-center gap-4 px-4 -mx-4">
                 <MapPin size={16} className="text-muted-foreground" />
                 <span className="font-body text-sm text-muted-foreground">Lahore, Pakistan</span>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
 
-        <div className="mt-32 border-t border-border pt-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+        <motion.div
+          className="mt-32 border-t border-border pt-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
           <p className="font-body text-xs text-muted-foreground">
             © 2026 Sohaib Waheed. All rights reserved.
           </p>
           <p className="font-body text-xs text-muted-foreground">
             Built with React + Vite + TypeScript + Tailwind CSS
           </p>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
