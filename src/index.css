@@ -61,9 +61,13 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-image: 
-      linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
-    background-size: 50px 50px;
+      linear-gradient(rgba(255, 255, 255, 0.18) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.18) 1px, transparent 1px),
+      url('/images/bg-grid.png');
+    background-size: 50px 50px, 50px 50px, cover;
+    background-position: center;
+    background-repeat: repeat, repeat, no-repeat;
+    background-attachment: fixed;
   }
 
   h1, h2, h3, h4, h5, h6 {
