@@ -80,11 +80,16 @@ export default {
           from: { opacity: "0", transform: "translateY(20px)" },
           to: { opacity: "1", transform: "translateY(0)" },
         },
+        "name-reveal": {
+          "0%": { opacity: "0", transform: "translateY(40px)", filter: "blur(8px)" },
+          "100%": { opacity: "1", transform: "translateY(0)", filter: "blur(0px)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "slide-up": "slide-up 0.4s ease-out forwards",
+        "name-reveal": "name-reveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards",
       },
     },
   },
