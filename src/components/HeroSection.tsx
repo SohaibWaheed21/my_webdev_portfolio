@@ -10,11 +10,23 @@ const HeroSection = () => {
           </p>
         </div>
 
-        <h1 className="font-display text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold leading-[0.9] tracking-tight mb-8">
-          Sohaib
-          <br />
-          <span className="text-primary">Waheed</span>
-        </h1>
+        <div className="flex items-start justify-between gap-8">
+          <h1 className="font-display text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold leading-[0.9] tracking-tight mb-8">
+            <span className="inline-block opacity-0 animate-name-reveal">Sohaib</span>
+            <br />
+            <span className="inline-block opacity-0 animate-name-reveal text-primary" style={{ animationDelay: "0.15s" }}>
+              Waheed
+            </span>
+          </h1>
+
+          <div className="hidden md:block flex-shrink-0 w-48 h-48 lg:w-64 lg:h-64 border border-border overflow-hidden mt-2">
+            <img
+              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+              alt="Profile"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 md:mt-20">
           <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed max-w-md">
