@@ -7,62 +7,46 @@ const projects = [
     title: "GetFitGYM",
     tech: "Next.js, MongoDB",
     description: "Fully automated gym website managing customer information, payment history, and trainer availability.",
-<<<<<<< HEAD
     preview: "dashboard",
     label: "Member dashboard",
-=======
->>>>>>> e4bb60752072ec142cce04758404c217137c2289
   },
   {
     id: "02",
     title: "Schedule Monitor",
     tech: "Node.js, React, MongoDB",
     description: "Full-stack web app for visualizing, adding, and editing weekly schedules with a responsive UI.",
-<<<<<<< HEAD
     preview: "schedule",
     label: "Weekly planner",
-=======
->>>>>>> e4bb60752072ec142cce04758404c217137c2289
   },
   {
     id: "03",
     title: "Sudoku Solver",
     tech: "Python, CSP Algorithms",
     description: "Real-time solver implementing Constraint Satisfaction Problem algorithms.",
-<<<<<<< HEAD
     preview: "grid",
     label: "Constraint board",
-=======
->>>>>>> e4bb60752072ec142cce04758404c217137c2289
   },
   {
     id: "04",
     title: "Expense Tracker",
     tech: "Python, Matplotlib, Pandas",
     description: "Dynamic expense tracker with bar and pie chart data visualizations.",
-<<<<<<< HEAD
     preview: "analytics",
     label: "Analytics view",
-=======
->>>>>>> e4bb60752072ec142cce04758404c217137c2289
   },
   {
     id: "05",
     title: "Shortest Path Finder",
     tech: "Java, Graph Algorithms",
     description: "Implemented Dijkstra's algorithm for computing optimal paths in weighted graphs.",
-<<<<<<< HEAD
     preview: "graph",
     label: "Path map",
-=======
->>>>>>> e4bb60752072ec142cce04758404c217137c2289
   },
   {
     id: "06",
     title: "AI Chat Bot",
     tech: "Python, NLP, Regex",
     description: "Conversational chatbot using regex pattern matching and NLP modules.",
-<<<<<<< HEAD
     preview: "chat",
     label: "Conversation flow",
   },
@@ -203,11 +187,6 @@ const ProjectPreview = ({ preview, label }: { preview: string; label: string }) 
   );
 };
 
-=======
-  },
-];
-
->>>>>>> e4bb60752072ec142cce04758404c217137c2289
 const ProjectsSection = () => {
   return (
     <section id="projects" className="border-b border-border px-6 py-20 md:py-32">
@@ -241,16 +220,11 @@ const ProjectsSection = () => {
           {projects.map((project, i) => (
             <motion.div
               key={project.id}
-<<<<<<< HEAD
               className="project-row border-t border-border/80 py-8 grid grid-cols-1 md:grid-cols-12 gap-6 group cursor-pointer px-4 -mx-4 items-center"
-=======
-              className="border-t border-border py-8 grid grid-cols-1 md:grid-cols-12 gap-4 group cursor-pointer hover-fill px-4 -mx-4"
->>>>>>> e4bb60752072ec142cce04758404c217137c2289
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.4, delay: i * 0.08 }}
-<<<<<<< HEAD
               whileHover={{ x: 6 }}
             >
               <div className="md:col-span-7 grid grid-cols-1 md:grid-cols-8 gap-4 md:gap-5 items-start">
@@ -288,29 +262,6 @@ const ProjectsSection = () => {
                 >
                   <ProjectPreview preview={project.preview} label={project.label} />
                 </motion.div>
-=======
-            >
-              <div className="md:col-span-1">
-                <span className="font-display text-xs text-muted-foreground group-hover:text-primary-foreground/60">
-                  {project.id}
-                </span>
-              </div>
-              <div className="md:col-span-3">
-                <h3 className="font-display text-xl font-semibold flex items-center gap-2">
-                  {project.title}
-                  <ArrowUpRight size={16} className="opacity-0 group-hover:opacity-100 transition-opacity duration-150" />
-                </h3>
-              </div>
-              <div className="md:col-span-2">
-                <p className="font-body text-xs uppercase tracking-widest text-muted-foreground group-hover:text-primary-foreground/60">
-                  {project.tech}
-                </p>
-              </div>
-              <div className="md:col-span-6">
-                <p className="font-body text-sm text-muted-foreground group-hover:text-primary-foreground/80">
-                  {project.description}
-                </p>
->>>>>>> e4bb60752072ec142cce04758404c217137c2289
               </div>
             </motion.div>
           ))}
