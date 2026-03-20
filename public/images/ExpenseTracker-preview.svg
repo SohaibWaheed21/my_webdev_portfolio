@@ -1,0 +1,26 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#101626"/>
+      <stop offset="1" stop-color="#0D111B"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0" y1="80" x2="0" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6EE7B7"/>
+      <stop offset="1" stop-color="#34D399" stop-opacity="0.35"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" rx="28" fill="url(#bg)"/>
+  <rect x="64" y="64" width="1072" height="592" rx="20" fill="#141B2D" stroke="#22304A"/>
+  <rect x="112" y="118" width="300" height="26" rx="8" fill="#1F2B44"/>
+  <rect x="112" y="164" width="180" height="14" rx="7" fill="#2D3D5E"/>
+  <rect x="112" y="560" width="960" height="2" fill="#2A3753"/>
+  <rect x="168" y="330" width="96" height="230" rx="14" fill="url(#bar)"/>
+  <rect x="314" y="250" width="96" height="310" rx="14" fill="url(#bar)"/>
+  <rect x="460" y="390" width="96" height="170" rx="14" fill="url(#bar)"/>
+  <rect x="606" y="210" width="96" height="350" rx="14" fill="url(#bar)"/>
+  <rect x="752" y="278" width="96" height="282" rx="14" fill="url(#bar)"/>
+  <circle cx="963" cy="344" r="132" fill="#111A2D" stroke="#2A3753" stroke-width="18"/>
+  <path d="M963 212A132 132 0 0 1 1094 340" stroke="#60A5FA" stroke-width="18" stroke-linecap="round"/>
+  <path d="M1094 340A132 132 0 0 1 963 476" stroke="#A78BFA" stroke-width="18" stroke-linecap="round"/>
+  <path d="M963 476A132 132 0 0 1 848 374" stroke="#34D399" stroke-width="18" stroke-linecap="round"/>
+</svg>

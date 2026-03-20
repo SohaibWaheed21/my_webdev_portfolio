@@ -10,18 +10,22 @@ const projects = [
     description: "Fully automated gym website managing customer information, payment history, and trainer availability.",
     details: "Built a comprehensive gym management platform with real-time membership tracking, automated payment processing via Stripe integration, trainer scheduling with calendar sync, and a member dashboard displaying workout history and progress analytics. Features role-based access for admins, trainers, and members.",
     preview: "image",
+    imageSrc: "/images/GetFitGym.png",
+    imageAlt: "GetFitGYM dashboard preview",
     label: "Live Dashboard",
     url: "https://getfitgym.site/",
   },
   {
     id: "02",
-    title: "Schedule Monitor",
-    tech: "Node.js, React, MongoDB",
-    description: "Full-stack web app for visualizing, adding, and editing weekly schedules with a responsive UI.",
-    details: "Developed a drag-and-drop schedule management system with conflict detection, color-coded time blocks, and export-to-PDF functionality. The backend REST API supports CRUD operations with real-time updates via WebSockets, ensuring all connected clients see changes instantly.",
-    preview: "schedule",
+    title: "The Bali Hai Golf Club",
+    techBatch: ["WordPress", "Google Analytics", "Elementor", "Figma"],
+    description: "Redesigned Bali Hai Golf Club's website to improve UX and drive online bookings.",
+    details: "Developed a responsive, visually striking website that integrates high-quality visuals, booking systems, and testimonials, reflecting the club's award-winning status and increasing online traffic and bookings by 30%.",
+    preview: "image",
+    imageSrc: "/images/GolfClub.png",
+    imageAlt: "Bali Hai Golf Club website preview",
     label: "Weekly planner",
-    url: "#",
+    url: "https://balihaigolfclub.com/",
   },
   {
     id: "04",
@@ -29,7 +33,9 @@ const projects = [
     tech: "Python, Matplotlib, Pandas",
     description: "Dynamic expense tracker with bar and pie chart data visualizations.",
     details: "Created an intuitive expense management tool with category-based tracking, monthly budget limits with alerts, and interactive data visualizations. Users can filter expenses by date range, category, and amount. Exports reports as CSV and generates visual summaries with Matplotlib charts.",
-    preview: "analytics",
+    preview: "image",
+    imageSrc: "/images/ExpenseTracker-preview.svg",
+    imageAlt: "Expense tracker analytics preview",
     label: "Analytics view",
     url: "#",
   },
@@ -39,7 +45,9 @@ const projects = [
     tech: "Java, Graph Algorithms",
     description: "Implemented Dijkstra's algorithm for computing optimal paths in weighted graphs.",
     details: "Built a graph visualization tool that renders weighted directed graphs and computes shortest paths using Dijkstra's and A* algorithms. Features include interactive node/edge creation, step-by-step algorithm visualization with priority queue state display, and performance comparison between different pathfinding strategies.",
-    preview: "graph",
+    preview: "image",
+    imageSrc: "/images/ShortestPath-preview.svg",
+    imageAlt: "Shortest path finder graph preview",
     label: "Path map",
     url: "#",
   },
@@ -49,13 +57,15 @@ const projects = [
     tech: "Python, NLP, Regex",
     description: "Conversational chatbot using regex pattern matching and NLP modules.",
     details: "Engineered a rule-based conversational agent with intent classification using regex patterns and spaCy NLP pipelines. Supports context-aware multi-turn dialogue, sentiment analysis for adaptive responses, and a knowledge base that can be extended via JSON configuration files.",
-    preview: "chat",
+    preview: "image",
+    imageSrc: "/images/AIChat-preview.svg",
+    imageAlt: "AI chatbot conversation preview",
     label: "Conversation flow",
     url: "#",
   },
 ];
 
-const ProjectPreview = ({ preview, label }: { preview: string; label: string }) => {
+const ProjectPreview = ({ preview, label, imageSrc, imageAlt }: { preview: string; label: string; imageSrc?: string; imageAlt?: string }) => {
   if (preview === "dashboard") {
     return (
       <div className="project-showcase-inner">
@@ -80,7 +90,7 @@ const ProjectPreview = ({ preview, label }: { preview: string; label: string }) 
           <span className="project-showcase-label">{label}</span>
         </div>
         <div className="project-image-wrap">
-          <img src="/images/GetFitGym.png" alt="GetFitGym Live Dashboard" />
+          <img src={imageSrc || "/images/bg-grid.png"} alt={imageAlt || `${label} preview`} loading="lazy" />
         </div>
       </div>
     );
@@ -221,19 +231,30 @@ const ProjectsSection = () => {
                       </span>
                     </div>
                     <div className="md:col-span-7 space-y-4">
-                      <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+                      <div className="grid grid-cols-1 gap-3 md:grid-cols-[minmax(0,1fr)_auto] md:items-start md:gap-5">
                         <div>
                           <h3 className="font-display text-xl font-semibold flex items-center gap-2 transition-transform duration-200 group-hover:translate-x-1">
                             {project.title}
                             <ArrowUpRight size={16} className="opacity-0 transition-all duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:opacity-100" />
                           </h3>
-                          <p className="mt-2 font-body text-sm text-muted-foreground transition-colors duration-200 group-hover:text-foreground/85">
+                          <p className="project-description mt-1.5 max-w-[62ch] font-body text-sm leading-relaxed text-muted-foreground transition-colors duration-200 group-hover:text-foreground/85">
                             {project.description}
                           </p>
                         </div>
-                        <p className="project-tech-chip font-body text-[11px] uppercase tracking-[0.24em] text-muted-foreground transition-colors duration-200 group-hover:text-foreground/70">
-                          {project.tech}
-                        </p>
+                        <div className="project-tech-chip font-body text-[11px] text-muted-foreground transition-colors duration-200 group-hover:text-foreground/70 md:items-end md:text-right">
+                          {project.techBatch ? (
+                            <div className="space-y-0.5">
+                              <span className="block whitespace-nowrap uppercase tracking-[0.12em] leading-[1.6]">
+                                {project.techBatch.slice(0, 2).join(", ")}
+                              </span>
+                              <span className="block whitespace-nowrap uppercase tracking-[0.12em] leading-[1.6]">
+                                {project.techBatch.slice(2, 4).join(", ")}
+                              </span>
+                            </div>
+                          ) : (
+                            <span className="block whitespace-nowrap uppercase tracking-[0.12em] leading-[1.6]">{project.tech}</span>
+                          )}
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -247,7 +268,7 @@ const ProjectsSection = () => {
                       transition={{ duration: 0.45, delay: i * 0.08 + 0.1 }}
                       whileHover={{ y: -4, scale: 1.01 }}
                     >
-                      <ProjectPreview preview={project.preview} label={project.label} />
+                      <ProjectPreview preview={project.preview} label={project.label} imageSrc={project.imageSrc} imageAlt={project.imageAlt} />
                     </motion.div>
                   </div>
                 </div>
