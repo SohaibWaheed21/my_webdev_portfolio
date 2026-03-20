@@ -9,9 +9,9 @@ const projects = [
     tech: "Next.js, MongoDB",
     description: "Fully automated gym website managing customer information, payment history, and trainer availability.",
     details: "Built a comprehensive gym management platform with real-time membership tracking, automated payment processing via Stripe integration, trainer scheduling with calendar sync, and a member dashboard displaying workout history and progress analytics. Features role-based access for admins, trainers, and members.",
-    preview: "dashboard",
-    label: "Member dashboard",
-    url: "#",
+    preview: "image",
+    label: "Live Dashboard",
+    url: "https://getfitgym.site/",
   },
   {
     id: "02",
@@ -21,16 +21,6 @@ const projects = [
     details: "Developed a drag-and-drop schedule management system with conflict detection, color-coded time blocks, and export-to-PDF functionality. The backend REST API supports CRUD operations with real-time updates via WebSockets, ensuring all connected clients see changes instantly.",
     preview: "schedule",
     label: "Weekly planner",
-    url: "#",
-  },
-  {
-    id: "03",
-    title: "Sudoku Solver",
-    tech: "Python, CSP Algorithms",
-    description: "Real-time solver implementing Constraint Satisfaction Problem algorithms.",
-    details: "Implemented multiple solving strategies including backtracking with forward checking, arc consistency (AC-3), and naked/hidden pair elimination. The solver visualizes each step of the algorithm in real-time, showing constraint propagation and domain reduction across the 9×9 grid.",
-    preview: "grid",
-    label: "Constraint board",
     url: "#",
   },
   {
@@ -78,6 +68,19 @@ const ProjectPreview = ({ preview, label }: { preview: string; label: string }) 
           <div className="project-dashboard-card" />
           <div className="project-dashboard-card project-delay-1" />
           <div className="project-dashboard-card project-delay-2" />
+        </div>
+      </div>
+    );
+  }
+  if (preview === "image") {
+    return (
+      <div className="project-showcase-inner">
+        <div className="project-showcase-header">
+          <div className="project-showcase-dots"><span /><span /><span /></div>
+          <span className="project-showcase-label">{label}</span>
+        </div>
+        <div className="project-image-wrap">
+          <img src="/images/GetFitGym.png" alt="GetFitGym Live Dashboard" />
         </div>
       </div>
     );
