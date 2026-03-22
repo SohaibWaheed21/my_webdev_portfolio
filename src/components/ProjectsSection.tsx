@@ -53,15 +53,15 @@ const projects = [
   },
   {
     id: "06",
-    title: "AI Chat Bot",
-    tech: "Python, NLP, Regex",
-    description: "Conversational chatbot using regex pattern matching and NLP modules.",
-    details: "Engineered a rule-based conversational agent with intent classification using regex patterns and spaCy NLP pipelines. Supports context-aware multi-turn dialogue, sentiment analysis for adaptive responses, and a knowledge base that can be extended via JSON configuration files.",
+    title: "Weather Chatbot",
+    tech: "Python, HTML, JQuery",
+    description: "AI-powered Weather Chatbot that provides real-time weather updates for any city in the world",
+    details: "This chatbot combines AI-style conversational UX with LiveWeather.orgs real-time API, allowing users to simply type a city name and instantly receive current weather conditions, forecasts, and alerts. The interface mimics a chat conversation, making it intuitive and engaging for users seeking quick weather information.",
     preview: "image",
-    imageSrc: "/images/AIChat-preview.svg",
-    imageAlt: "AI chatbot conversation preview",
+    imageSrc: "/images/WeatherChatbot.png",
+    imageAlt: "Weather chatbot conversation preview",
     label: "Conversation flow",
-    url: "#",
+    url: "https://live-weather-forecast.onrender.com/",
   },
 ];
 
