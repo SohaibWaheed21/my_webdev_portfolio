@@ -25,7 +25,7 @@ const HeroSection = () => {
           </p>
         </motion.div>
 
-        <div className="flex flex-col gap-12 lg:flex-row lg:items-start lg:justify-between lg:gap-12">
+        <div className="flex flex-col">
           <div className="max-w-4xl">
             <h1 className="font-display text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold leading-[0.9] tracking-tight mb-8">
               <motion.span
@@ -55,25 +55,9 @@ const HeroSection = () => {
               style={{ transformOrigin: "left" }}
             />
           </div>
-
-          <motion.div
-            className="hero-portrait hidden md:flex shrink-0 self-start lg:mt-6"
-            initial={{ opacity: 0, scale: 0.92, rotate: -3, x: 16 }}
-            animate={{ opacity: 1, scale: 1, rotate: 0 }}
-            transition={{ duration: 0.7, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            whileHover={{ scale: 1.03, rotate: 0.8, y: -6 }}
-          >
-            <div className="hero-portrait-frame">
-              <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=760&fit=crop&crop=face"
-                alt="Sohaib Waheed"
-                className="hero-portrait-image"
-              />
-            </div>
-          </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 md:mt-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 md:mt-20 mb-4">
           <motion.p
             className="font-body text-base md:text-lg text-muted-foreground leading-relaxed max-w-md"
             initial={{ opacity: 0, y: 20 }}

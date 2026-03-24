@@ -4,20 +4,38 @@ const AboutSection = () => {
   return (
     <section id="about" className="border-b border-border px-6 py-20 md:py-32">
       <div className="max-w-[1400px] mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
+          {/* Left side - Profile Image */}
           <motion.div
-            className="md:col-span-4"
-            initial={{ opacity: 0, x: -20 }}
+            className="md:col-span-3 flex justify-center md:justify-start"
+            initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.6 }}
           >
-            <p className="font-body text-xs uppercase tracking-[0.3em] text-muted-foreground">
-              01 — About
-            </p>
+            <div className="about-image-frame group">
+              <img
+                src="/images/profileimg.jpeg"
+                alt="Sohaib Waheed"
+                className="about-image"
+              />
+            </div>
           </motion.div>
 
-          <div className="md:col-span-8">
+          {/* Right side - Content */}
+          <div className="md:col-span-9">
+            <motion.div
+              className="md:col-span-4 mb-8"
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.5 }}
+            >
+              <p className="font-body text-xs uppercase tracking-[0.3em] text-muted-foreground">
+                01 — About
+              </p>
+            </motion.div>
+
             <motion.h2
               className="font-display text-3xl md:text-5xl font-bold leading-tight mb-8"
               initial={{ opacity: 0, y: 30 }}
