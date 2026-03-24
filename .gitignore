@@ -22,3 +22,20 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Vite
+.vite/
+
+# Playwright
+test-results/
+.playwright/
+
+# Tailwind
+tailwindcss.log
+
+# Environment files
+.env
+
+# Cache and coverage
+.cache/
+coverage/
