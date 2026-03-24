@@ -169,6 +169,10 @@ const ProjectPreview = ({ preview, label, imageSrc, imageAlt }: { preview: strin
 const ProjectsSection = () => {
   const [expandedId, setExpandedId] = useState<string | null>(null);
 
+  const handleToggleExpand = (projectId: string) => {
+    setExpandedId((currentId) => (currentId === projectId ? null : projectId));
+  };
+
   return (
     <section id="projects" className="border-b border-border px-6 py-20 md:py-32">
       <div className="max-w-[1400px] mx-auto">
@@ -210,6 +214,16 @@ const ProjectsSection = () => {
                 transition={{ duration: 0.4, delay: i * 0.08 }}
                 onHoverStart={() => setExpandedId(project.id)}
                 onHoverEnd={() => setExpandedId(null)}
+                onClick={() => handleToggleExpand(project.id)}
+                onKeyDown={(event) => {
+                  if (event.key === "Enter" || event.key === " ") {
+                    event.preventDefault();
+                    handleToggleExpand(project.id);
+                  }
+                }}
+                role="button"
+                tabIndex={0}
+                aria-expanded={isExpanded}
               >
                 <div className="py-8 grid grid-cols-1 md:grid-cols-12 gap-6 group items-center">
                   <div className="md:col-span-7 grid grid-cols-1 md:grid-cols-8 gap-4 md:gap-5 items-start">
